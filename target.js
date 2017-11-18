@@ -210,7 +210,7 @@ var pxtTargetBundle = {
     "boardName": "Calliope mini",
     "driveDisplayName": "MINI",
     /*"sideDoc": "tutorials/getting-started",*/
-    "feedbackUrl": "https://www.research.net/r/MCmicro",
+    "feedbackUrl": "https://github.com/wi-wissen/pxt-calliope-static/issues",
 	"disableLiveTranslations":true, /* seems not to work? */
 	"browserSupport": [
       {
@@ -270,7 +270,7 @@ var pxtTargetBundle = {
       },
       {
         "name": "GitHub",
-        "path": "/docs/reference"
+        "path": "https://github.com/wi-wissen/pxt-calliope-static"
       },
       {
         "name": "Kaufen (Affiliate)",
