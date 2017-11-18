@@ -3101,7 +3101,7 @@ var pxt;
             }
             res.generatedFiles[sourcePath + "pointers.cpp"] = includesInc + protos.finish() + pointersInc + "\nPXT_SHIMS_END\n";
             res.generatedFiles["/config.json"] = JSON.stringify(configJson, null, 4) + "\n";
-            res.generatedFiles[sourcePath + "main.cpp"] = "\n#include \"pxt.h\"\n#ifdef PXT_MAIN\nPXT_MAIN\n#else\nint main() { \n    uBit.init();\n\n	KeyValuePair* firstTime = uBit.storage.get(\"boot\");\n\n    int stored;\n\n    if(firstTime == NULL)\n    {\n        //this is the first boot after a flash. \n        stored = 1;\n        uBit.storage.put(\"boot\", (uint8_t *)&stored, sizeof(int));\n        \n		//run\n		pxt::start();\n		while (1) uBit.sleep(10000); \n    }\n    else\n    {\n        //this is not the first boot, scroll our stored value.\n        memcpy(&stored, firstTime->value, sizeof(int));\n        //delete firstTime;\n		\n		if (stored !=1) {\n			stored = 1;\n			uBit.storage.put(\"boot\", (uint8_t *)&stored, sizeof(int));\n			\n			pxt::start();\n			while (1) uBit.sleep(10000);    \n		} else {\n			stored = 2;\n			uBit.storage.put(\"boot\", (uint8_t *)&stored, sizeof(int));\n		}\n    }\n	\n	return 0; \n}\n#endif\n";
+            res.generatedFiles[sourcePath + "main.cpp"] = "\n#include \"pxt.h\"\n#ifdef PXT_MAIN\nPXT_MAIN\n#else\nint main() { \n    uBit.init(); \n    pxt::start(); \n    while (1) uBit.sleep(10000);    \n    return 0; \n}\n#endif\n";
             var tmp = res.extensionFiles;
             U.jsonCopyFrom(tmp, res.generatedFiles);
             var creq = {
