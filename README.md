@@ -5,7 +5,12 @@ PXT as a static web page. You can download and run in a local web server.
 > ~~This is an interesting alternative for single-user offline use of the editor.~~
 > Be aware that you need for your first start an internet connection. This is for compiling the first hex file on a Microsoft server.
 
-## Example
+## Online
+
+**[pxt-calliope-static.wi-wissen.de](http://pxt-calliope-static.wi-wissen.de/)** shows the gh-pages branch.
+
+## Local
+
 Clone the repository.
 ```
 git clone https://github.com/wi-wissen/pxt-calliope-static
