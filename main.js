@@ -1593,7 +1593,7 @@ $(document).ready(function () {
     initLogin();
     var hash = parseHash();
     var hm = /^(https:\/\/[^/]+)/.exec(window.location.href);
-    if (hm)
+    if (hm && 1==2) //breaks in every case otherwise you have your api on your host if https is eneabled
         Cloud.apiRoot = hm[1] + "/api/";
     var ws = /ws=(\w+)/.exec(window.location.href);
     if (ws)
