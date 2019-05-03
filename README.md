@@ -7,7 +7,7 @@ PXT as a static web page. You can download and run in a local web server.
 
 ## Online
 
-**[pxt-calliope-static.wi-wissen.de](http://pxt-calliope-static.wi-wissen.de/)** shows the gh-pages branch.
+**[calliope-editor.yak9.de](https://calliope-editor.yak9.de/)** shows the gh-pages branch.
 
 ## Local
 
